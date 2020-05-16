@@ -1,6 +1,8 @@
 # birdCalls
 final project!
 
+![image](https://user-images.githubusercontent.com/39317030/82128525-a8106700-9770-11ea-979d-d522e5936aa7.png)
+
 # Problem: What bird do I hear?
 
 ### [Dataset](https://www.xeno-canto.org/explore/api)
@@ -14,7 +16,6 @@ final project!
 * Show process and findings on an HTML page (or Tableau?)
 * STRETCH GOAL: prompt google search and display image or info on bird species
 * Display frequency of bird species on map tooltip/mouseover functions that give more specs for each species 
-
 
 
 ## Technological considerations:
