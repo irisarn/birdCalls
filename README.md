@@ -1,5 +1,5 @@
-# birdCalls
-final project!
+# Bird Calls
+Our Final Project!
 
 ![image](https://user-images.githubusercontent.com/39317030/82128525-a8106700-9770-11ea-979d-d522e5936aa7.png)
 
