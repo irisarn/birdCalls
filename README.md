@@ -24,6 +24,7 @@ Our Final Project!
 * Leaflet/HTML/JavaScript are all applicable (especially for creating interactive map) 
 
 ## Task Allocation for now: 
-* Jasmin and Luisa are working on API calls/ data cleaning 
+* Jasmin worked on API calls/ data cleaning and downloded meatdata and MP3 files on Amazon RDS  
+* Luisa downloaded the API calls metadata collected by Jasmin and created a SQLite database with two tables.
 * Iris is starting to explore how to convert audio files 
 * Harmony is starting on map!
