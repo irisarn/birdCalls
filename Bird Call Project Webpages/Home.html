@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .hero-container {
+    float: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 200px;
+  }
+
+  .hero-page-header {
+    float: center;
+  }
+
+  .hero-boxed {
+    float: center; 
+    width: 85%;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <div class="topnav">
+    <a class="active" href="Home.html">Home</a>
+    <a href="Data Collection.html">Data Collection</a>
+    <a href="Converting Sound to Data.html">Converting Sound to Data</a>
+    <a href="Training our Model.html">Training our Model</a>
+    <a href="Data Storage.html">Data Storage</a>
+    <a href="Web Design.html">Web Design</a>
+    <a href="Resources.html">Resources</a>
+  </div>
+  
+  </body>
+  </html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bird Calls of Oregon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="hero text-center">
+      <h1>Bird Calls of Oregon - What Bird Do I Hear?</h1>
+      <p>Final Project by Iris Arnold, Jasmin Schaefer, Luisa Zini and Harmony Mosby</p>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-boxed">
+        <div class="hero-page-header">
+          <div class="flex-container">
+          <center>
+            <h1>Project Background</h1></center>
+            <center><h3></h3></center>
+            <h3 style="text-align:center;"></h3>
+        </div>
+        <p>
+          <!-- <center><img src= "static/images/wave outline2.png" alt="wave" style="width:80%"></center></p> -->
+          <p>
+          </p>
+          <p>
+            Throughout the machine learning module of this course we have seen the classification of images to aid in handwriting analysis, identify animals, and to classify flower species with a high degree of accuracy. The utility of the machine learning process can also be seen in many services we use on a day to day basis such as recommendation systems (Netflix and YouTube), search engines (Google and Bing), and social media feeds (Facebook and twitter). For our project we wanted to take a deeper look at a domain in which the application of the machine learning process seems to be relatively scarce, sound classification. The real world application of this type of machine learning platform can aid in areas such as predictive maintenance in industrial settings and aid the deaf community in daily activities.  While we did touch on sound classification briefly with the prediction of gender based on acoustic properties of voice and speech, we wanted to take this a step further and see if we could train a machine learning model to be able to classify a sound based off of a raw audio file. To demonstrate the machine learning process on the classification of sound we focused on the identification of bird species based on audio clips of bird calls.  
+        </p>   
+        <p></p>
+        <p>Want to learn more about your favorite bird? - Search for any Bird - Powered by Google</p>
+        <p>This API searches for any bird you type in via the Audubon Society, All About Birds and E-Birds</p>
+
+    <!-- <section> -->
+      <!-- <h1>Random Recording</h1>
+      <div class="xc-audio">
+        <div id="xc-audio_457546_348" class="jp-style-single" data-xc-filepath="//www.xeno-canto.org/sounds/uploaded/HLVNWOZJJK/XC457546-laggar%20Falcon%20call.mp3" data-xc-id="457546">
+          <div class="jp-xc-id">
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="/457546">XC457546</a>
+                    <a download="XC457546 - Laggar Falcon - Falco jugger.mp3"
+                  href="/457546/download">
+                      <img src="/static/img/download.png" width="14" height="14" title="Download file 'XC457546-Laggar Falcon call.mp3'">
+                    </a>
+                  </td>
+                  <td class="licenses">
+                    <a href="creativecommons.org/licenses/by-nc-sa/4.0/"
+                    title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0">
+                        <img width="14" height="14" src="/static/img/cc.png">
+                        <img width="14" height="14" src="/static/img/cc-by.png">
+                        <img width="14" height="14" src="/static/img/cc-nc.png">
+                        <img width="14" height="14" src="/static/img/cc-sa.png">
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="jp-xc-sono">
+              <a class="fancybox" rel="sono" title="XC457546: Laggar Falcon (Falco jugger) by Viral Patel & Pankaj Maheria" href="www.xeno-canto.org/sounds/uploaded/HLVNWOZJJK/ffts/XC457546-large.png">
+                <img src="www.xeno-canto.org/sounds/uploaded/HLVNWOZJJK/ffts/XC457546-small.png"> == $0
+              </a>
+            </div>
+            <div class="jp-gui jp-interface">
+              <ul class="jp-controls">
+                <li>
+                  <a href="javascript:;" class="jp-play" tabindex="1">play</a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="jp-pause" style="display:none;"
+                  tabindex="1">pause</a>
+                </li>
+              </ul>
+              <div class="jp-progress">
+                <div class="jp-seek-bar" style="width: 0%;">
+                  <div class="jp-play-bar" style="width: 0%;">
+                  </div>
+              </div>
+            </div>
+            <div class="jp-time-holder">
+              <div class="jp-current-time">0:00</div>
+              <div class="jp-xc-duration">0:17</div>
+            </div>
+          </div>
+          <div class="jp-title" title="Laggar Falcon (Falco jugger) - call">
+            <span class="common-name">Laggar Falcon</span>
+            " ("
+            <span class="scientific-name">Falco jugger</span>
+            ")
+                            ."
+            <span class="jp-xc-call-type">call</span>
+          </div>
+          <div class="jp-xc-recordist">Viral Patel & Pankaj Maheria</div>
+          <div class="jp-xc-location" title="Blackbuck National Park (nearVelavadar), Bhavnagar, Gujarat, India">Blackbuck National Park (near Velavadar), Bhavnagar, Gujarat, India</div>
+        </div>
+      </div>
+      </section>
+    </section> -->
+
+    <!-- <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a Name</label>
+                        <input class="form-control" id="name" type="text" English Name="Black-capped Chickadee">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="birdData" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">City</th>
+                  <th class="table-head">English Name</th>
+                  <th class="table-head">Genus</th>
+                  <th class="table-head">Location</th>
+                  <th class="table-head">Latitude</th>
+                  <th class="table-head">Longitude</th>
+                  <th class="table-head">Quality Score</th>
+                  <th class="table-head">Author Remarks</th>
+                  <th class="table-head">Recording Type</th>
+                  <th class="table-head">MP3 Download</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">Bird Calls of Oregon</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/data/birdData.csv"></script>
+  <script src="static/js/app.js"></script>
+</body>
+
+</html> -->
+
+<!-- <head>
+  <title>CNIS Approvers' Search Engine</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  
+  
+  
+  <link rel="stylesheet" href="bootstrap4/bootstrap-multiselect-dropdown/docs/css/bootstrap-3.3.2.min.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap4/bootstrap-multiselect-dropdown/docs/css/bootstrap-example.min.css" type="text/css">
+  <!-- Include Twitter Bootstrap and jQuery: -->
+  <script type="text/javascript" src="bootstrap4/bootstrap-multiselect-dropdown/docs/js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="bootstrap4/bootstrap-multiselect-dropdown/docs/js/bootstrap-3.3.2.min.js"></script>  
+  
+  <!-- Include the plugin's CSS and JS: -->
+  
+  <link rel="stylesheet" href="bootstrap4/bootstrap-multiselect-dropdown/dist/css/bootstrap-multiselect.css" type="text/css"/>
+  <script type="text/javascript" src="bootstrap4/bootstrap-multiselect-dropdown/dist/js/bootstrap-multiselect.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+    <!-- <div class="hero text-center">
+      <h1> Search Birds</h1>
+      <p>In any location</p>
+    </div> -->
+
+    <!-- <div class="container2">
+    <div class="row" id="googleSearch">
+      </div>
+      </div> -->
+        
+        <!-- <div class="row margin-top-50">
+
+        <div class="col-lg-1"></div> -->
+
+        
+        <!-- <div class="col-lg-8">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2>Search for any bird </h2> -->
+              
+            <!-- </div>
+            <div class="panel-body" align="center">
+              <h3>On the following sites:</h3>
+              <li>Audobon Society</li>
+              <li>All About Birds</li>
+              <li>ebird</li><br> -->
+
+              <script async src="https://cse.google.com/cse.js?cx=017037591694420436331:prypzbmqv3r"></script>
+                <div class="gcse-searchbox"></div>           
+                <div class="gcse-searchresults"></div>
+
+            </div>
+            </body>
+            
+            

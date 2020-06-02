@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <div class="topnav">
+    <a class="active" href="Home.html">Home</a>
+    <a href="Data Collection.html">Data Collection</a>
+    <a href="Converting Sound to Data.html">Converting Sound to Data</a>
+    <a href="Training our Model.html">Training our Model</a>
+    <a href="Data Storage.html">Data Storage</a>
+    <a href="Web Design.html">Web Design</a>
+    <a href="Resources.html">Resources</a>
+  </div>
+  
+  </body>
+  </html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bird Calls of Oregon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<div id="textbox">
+ 
+  <p class="alignright"></p>
+</div>
+
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=.1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- <div class="w3-container">
+  <h2>Displaying Colors</h2>
+  <p>The w3-color classes can be used to add colors to any HTML element.</p>
+</div> -->
+
+<!-- <div class="w3-container w3-Blue">
+  <p>London is the capital city of England.</p>
+</div>
+
+</body>
+</html> -->
+
+<!-- <html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container w3-green">
+  <h1>Converting Sound to Data using Librosa</h1>
+</div>
+
+<div class="w3-container">
+  <p>The w3-container class can be used to display headers.</p>
+</div>
+
+</body>
+</html>  -->
+
+<!-- <div class="boxed">
+
+  Converting Sound to Data 
+  <p style="text-decoration:underline;"></p> 
+  <p></p>
+</div> -->
+
+<!-- <img style="border:10px solid black;" src="../images/audio files.png" width="225" height="151" alt="audio files.png" />
+<img src="audio files.png" /> -->
+
+
+
+<!-- <p style="text-decoration:underline;"></p>
+
+<p style="text-align:left;"></p>
+<p style="text-align:center;"></p>
+<p style="text-align:right;"></p> -->
+
+
+<div class="container">
+  <div class="boxed">
+    <div class="page-header">
+      <center>
+        <h1>Converting Sound to Data using Librosa</h1></center>
+        <center><h3>A Python Library for Audio and Music Analysis</h3></center>
+        <h3 style="text-align:center;"></h3>
+    </div>
+    <p>
+      <center><img src= "static/images/wave outline2.png" alt="wave" style="width:80%"></center></p>
+      <p>
+      </p>
+      <p>
+      <ul>
+        <li>Librosa provides the building blocks necessary to create audio information retrieval systems.</li>  
+    </p>   
+    <p>
+        <li>Locating and becoming familiar with Librosa</li>
+    </p>  
+    <p>
+        <li>Determining the most appropriate form of output from audio recordings to feed into a model </li>
+    </p>
+    <p>
+          <ul>
+            <li>We ended up using Librosa to create a scaled MFCC for each recording which is a numerical array with 40 values.</li>
+          </p>
+            <li>Mel-Frequency Cepstral Coefficients (MFCCs)</li>
+            <p>
+            <ul>
+              <li>The idea of MFCC is to convert audio in time domain into frequency domain so that we can understand all the information present in audio signals.</li>
+            </ul>
+          </ul> 
+    </p>
+    <p>
+        <li>Generating and organizing the data for the model</li>
+    </p>
+    <p>
+      <ul>
+        <li>Associating the correct audio files with the correct bird call metadata</li>
+    </p> 
+    <p>
+        <ul>
+          <li>Finding a way to file path within drive when using google colab</li>
+          </ul>
+      </ul>
+    </p>
+    <p>
+      <li>Converting all files from mp3 to .wav as a preliminary step for creating mfcc’s in librosa</li>
+    </p> 
+    <p>
+      <li>Designing and defining a function to extract mfcc’s</li>
+    </p>   
+  </div>
+</div>
+
+
+
+
+<h2 style="text-align:center;"></h2>
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.img-container {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+<h2></h2>
+<p></p>
+
+<div class="clearfix">
+  <div class="img-container">
+    <!-- <div class="image.resize"> -->
+    
+  <img src= "static/images/librosa 1.png" alt="1" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="static/images/librosa 2.png" alt="2" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="static/images/librosa 3.png" alt="3" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="static/images/librosa input.png" alt="input" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="static/images/librosa output.png" alt="output" style="width:100%">
+  </div>
+</div>
+</div>
+
+</body>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+
+/* <!-- <p>Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing property to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the effect.</p> -->
+
+</body>
+</html> */
+
+
