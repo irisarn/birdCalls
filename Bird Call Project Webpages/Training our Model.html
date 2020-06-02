@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <div class="topnav">
+    <a class="active" href="Home.html">Home</a>
+    <a href="Data Collection.html">Data Collection</a>
+    <a href="Converting Sound to Data.html">Converting Sound to Data</a>
+    <a href="Training our Model.html">Training our Model</a>
+    <a href="Data Storage.html">Data Storage</a>
+    <a href="Web Design.html">Web Design</a>
+    <a href="Resources.html">Resources</a>
+  </div>
+  
+  </body>
+  </html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bird Calls of Oregon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<div id="textbox">
+ 
+  <p class="alignright"></p>
+</div>
+
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=.1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- <div class="w3-container">
+  <h2>Displaying Colors</h2>
+  <p>The w3-color classes can be used to add colors to any HTML element.</p>
+</div> -->
+
+<!-- <div class="w3-container w3-Blue">
+  <p>London is the capital city of England.</p>
+</div>
+
+</body>
+</html> -->
+
+<!-- <html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container w3-green">
+  <h1>Converting Sound to Data using Librosa</h1>
+</div>
+
+<div class="w3-container">
+  <p>The w3-container class can be used to display headers.</p>
+</div>
+
+</body>
+</html>  -->
+
+<!-- <div class="boxed">
+
+  Converting Sound to Data 
+  <p style="text-decoration:underline;"></p> 
+  <p></p>
+</div> -->
+
+<!-- <img style="border:10px solid black;" src="../images/audio files.png" width="225" height="151" alt="audio files.png" />
+<img src="audio files.png" /> -->
+
+
+
+<!-- <p style="text-decoration:underline;"></p>
+
+<p style="text-align:left;"></p>
+<p style="text-align:center;"></p>
+<p style="text-align:right;"></p> -->
+
+
+<div class="container">
+  <div class="boxed">
+    <div class="page-header">
+      <center>
+        <h1>Creating and Training our Model</h1></center>
+        <center><h3></h3></center>
+        <h3 style="text-align:center;"></h3>
+    </div>
+    <p>
+      <!-- <center><img src= "static/images/wave outline2.png" alt="wave" style="width:80%"></center></p> -->
+      <p>
+      </p>
+      <p>
+      <ul>
+        <li>Since the input to the model (mfccs) is similar to the model input (arrays representing pixel values of a given image) in the MNIST activity from class, we decided to use the solved version of that activity as a sort of template for our coding logic.</li>  
+    </p>   
+    <p>However, there were some key differences:</p>
+    <p>
+      <ul>
+        <li>Our y data is categorical and composed of strings whereas in the MNIST activity the y data (the thing the model is trying to predict) is a number and an int which makes it easier to un-encrypt. Additionally, it meant that the shape of our y_test and y_train were consistent with that of our x data and no re-shaping had to be done like in the MNIST example.
+        </li>
+        <p>
+          <li>The MNIST data was rescaled so that all pixel values ranges between 0 and 1. This was not a necessary step and didn’t make sense to perform on mfcc data as values within an mfcc aren’t comparable to pixel values.  </li>
+        </p>
+      </ul> 
+    <p>
+        <li>Just like in MNIST, we created a sequential model and then added hidden layers and a ‘softmax’ layer before compiling our model. Within the two first hidden layers, I made the number of nodes (780) ten times the number of classes (bird species, 78 distinct ones). I had to specify the number of output classes (78) in the ‘softmax’ layer. </li>
+    </p>
+    <p>
+        <li>We compiled and got a model summary then recompiled using categorical crossentropy for categorical data and mean squared error for regression. </li>
+          </p>
+          <p>
+            <li>Finally, we trained our model (which consists of updating weights using an optimizer and loss function). In this example, we choose 100 iterations (loops/epochs) of training. I will note that we could have probably gotten by with about 70 but what’s an extra epoch gonna do?</li></p>
+            <p>Evaluation and Prediction</p>
+            <center><img src= "static/images/Iris 7.png" alt="Iris 7" style="width:95%"></center></p>
+            <center><img src= "static/images/Iris 8.png" alt="Iris 8" style="width:95%"></center></p>
+            <p>
+              <li>After saving our model it was time to evaluate!! And our accuracy was… not what we we’re hoping for. </li>
+              <p>
+                There are several possible explanations for our model’s low accuracy:
+                <p>
+                  <ul>
+                  <li>Messy audio clips (inconsistent length and quality)</li>
+                  <p>
+                    <li>Lack of conceptual understanding of scaled mfcc output</li>
+                    <p>
+                      <li>Not enough data used in training the model</li>
+                      <p>
+                        <li>Wrong or under-optimized choices regarding number of nodes, epochs and layers</li>
+                      </p></ul>
+                  </p>
+                </p>
+              </p>
+            </p>
+            </ul>
+          </ul> 
+    </p>
+    <p>
+      <ul>
+        <li>What to do? </li>
+    </p>
+    <p>
+      <ul>
+        <li>I figured it was some combination of each of the above concerns. Given the time restraint and the intended scope of the project, I chose not to seriously try to improve my audio processing knowledge/skills or figure out how to pre-process and clean up audio clips. </li>
+    </p> 
+    <p>
+        <li>So Jasmin and I attempted to account for poor audio quality/consistency by feeding the model a subset of ‘cleaner’ data (meaning audio clips that had a quality score listed and a  recording type of "call", see our notebook, “CLEAN_DATA_ONLY.ipynb” and exported csv, “CLEAN_RECS.cvs” ). However, this resulted in even WORSE overall model accuracy as well as greater loss. I believe this is due to the fact that in cleaning data, we eliminated A LOT of data points and the resulting set of data was too small to train the model.  
+          </li>
+    <p>
+      <li>After much struggle and frustration, we decided to call it a day. It is a bit disappointing that we have not yet successfully built a working and accurate model. But there is more that could be done in the feature to make our model more accurate:
+      </li>
+    </p>
+      </ul>
+    </p>
+    <p>
+      <ul>
+      <li>Pre-processing audio that model will be trained with (eliminating long silences, ensuring consistent clip length, somehow quieting background noise)</li>
+    
+    <p>
+      <li>Using additional parameters associated with each audio clip in a addition to mfcc output to train the model (ex: a recording’s average amplitude, bit depth, sample rate,  or fmt (number of channels))
+      </li> </ul>
+    <p>
+      <li>Predicting went well. When we did it with the training data, the model got it right and when we used testing data, it didn’t. That's what I would expect given our model accuracy was evaluated at .407 initially. I designed a key in the form of a pandas data frame so that someone using the notebook can decipher which encrypted bird species the model is predicting. </li>
+    </p>   
+  </div>
+</div>
+
+
+
+
+<h2 style="text-align:center;"></h2>
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.img-container {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+<h2></h2>
+<p></p>
+
+<div class="clearfix">
+  <div class="img-container">
+    <!-- <div class="image.resize"> -->
+    
+  <img src= "static/images/Iris 1.png" alt="Iris" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="static/images/Iris 2.png" alt="Iris 2" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="static/images/Iris 3.png" alt="Iris 3" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="static/images/Iris 4.png" alt="iris 4" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="static/images/Iris 5.png" alt="Iris 5" style="width:100%">
+  </div>
+  <div class="img-container">
+    <img src="static/images/Iris 6.png" alt="Iris 6" style="width:100%">
+    </div>
+    <!-- <div class="img-container">
+    <img src="static/images/Iris 7.png" alt="Iris 7" style="width:100%">
+    </div>
+    <div class="img-container">
+    <img src="static/images/Iris 8.png" alt="Iris 8" style="width:100%">
+    </div> -->
+    <div class="img-container">
+    <img src="static/images/Iris 9.png" alt="Iris 9" style="width:100%">
+    </div>
+</div>
+</div>
+
+</body>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+
+/* <!-- <p>Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing property to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the effect.</p> -->
+
+</body>
+</html> */
+

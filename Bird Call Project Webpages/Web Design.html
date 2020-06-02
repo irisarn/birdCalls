@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <div class="topnav">
+    <a class="active" href="Home.html">Home</a>
+    <a href="Data Collection.html">Data Collection</a>
+    <a href="Converting Sound to Data.html">Converting Sound to Data</a>
+    <a href="Training our Model.html">Training our Model</a>
+    <a href="Data Storage.html">Data Storage</a>
+    <a href="Web Design.html">Web Design</a>
+    <a href="Resources.html">Resources</a>
+  </div>
+  
+  </body>
+  </html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bird Calls of Oregon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<div class="container">
+  <div class="boxed">
+    <div class="page-header">
+      <center>
+        <h1>Web Design - Presenting our Project</h1></center>
+        <center><h3>Using HTML, CSS and Javascript</h3></center>
+        <h3 style="text-align:center;"></h3>
+    </div>
+    <p>
+      <center>
+        <img src= "static/images/bird collage.PNG" alt="Bird collage" style="width:80%"></center></p>
+      <p>
+      </p>
+      <p>
+      <ul>
+        <li>We wanted to present our Final Project in a Web page design.</li>  
+    </p>   
+    <p>
+        <li>Home Page:</li>
+        <p>
+        <ul>
+          <li>Creating Hero Containers and Hero Text with Animation</li>
+        </p>
+        <li>Adding in the Google search that Luisa created into the HTML</li>
+        </ul></p>
+        <li>Web Pages </li></p>
+        <p>
+          <ul>
+            <li>Determining the layout</li>
+          </ul>
+          <ul><p>
+            <li>Containers and Page Headers</li>
+            <p>
+              <li>Image Containers to house our floating images.</li>
+          <p>
+          <ul>
+            <li>Clear Fix</li>
+      <p>
+        </ul></p></div>
+        <center>
+          <img src= "static/images/Navagation.PNG" alt="Bird collage" style="width:80%"></center></p>
+      <p>
+        <center>
+          <img src= "static/images/navigation 2.PNG" alt="Bird collage" style="width:80%"></center></p>
+          <!-- We built a container text box to the left with floating images to the right.  For the floatingimages we built an image container with a clear fix added to it.</li> -->
+    </p>  
+    <!-- <p>
+        <li>Home Page: Hero Content</li>
+    </p> -->
+    <!-- <p>
+          <ul>
+            <li>Animating Text.  Both of which are based off of the Javascript UFO Homework </li>
+          </p> -->
+            <!-- <li>Mel-Frequency Cepstral Coefficients (MFCCs)</li> -->
+            <p>
+            <ul>
+              <!-- <li>The idea of MFCC is to convert audio in time domain into frequency domain so that we can understand all the information present in audio signals.</li> -->
+            </ul>
+          </ul> 
+    </p>
+    <p>
+        <!-- <li>Generating and organizing the data for the model</li>
+    </p>
+    <p>
+      <ul>
+        <li>Associating the correct audio files with the correct bird call metadata</li>
+    </p> 
+    <p>
+        <ul>
+          <li>Finding a way to file path within drive when using google colab</li>
+          </ul>
+      </ul> -->
+    </p>
+    <!-- <p>
+      <li>Converting all files from mp3 to .wav as a preliminary step for creating mfcc’s in librosa</li>
+    </p> 
+    <p>
+      <li>Designing and defining a function to extract mfcc’s</li> -->
+    </p>   
+  </div>
+</div>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.img-container {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10;
+}
+.img src{
+  float: left;
+  width: 100%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+<h2></h2>
+<p></p>
+
+<div class="clearfix">
+  <div class="img-container">
+    <!-- <div class="image.resize"> -->
+    
+  <img src= "static/images/HTML Hero.PNG" alt="HTML Hero" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="static/images/CSS Hero.PNG" alt="CSS Hero" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="static/images/image container with a clear fix.PNG" alt="Image container" style="width:100%">
+  </div>
+  <!-- <div class="img-container">
+    <img src="static/images/Navagation.PNG" alt="Image container" style="width:100%">
+    </div>
+    <div class="img-container">
+      <img src="static/images/navigation 2.PNG" alt="Image container" style="width:100%">
+      </div> -->
+  <!-- <div class="img-container">
+  <img src="static/images/librosa input.png" alt="input" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="static/images/librosa output.png" alt="output" style="width:100%">
+  </div> -->
+</div>
+</div>
+
+</body>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+
+/* <!-- <p>Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing property to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the effect.</p> -->
+
+</body>
+</html> */

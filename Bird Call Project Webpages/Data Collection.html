@@ -1,0 +1,258 @@
+
+
+
+<!-- <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Bird Calls of Oregon Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/app.js"></script>
+  <script src="./static/js/bonus.js"></script>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <div class="topnav">
+    <a class="active" href="Home.html">Home</a>
+    <a href="Data Collection.html">Data Collection</a>
+    <a href="Converting Sound to Data.html">Converting Sound to Data</a>
+    <a href="Training our Model.html">Training our Model</a>
+    <a href="Data Storage.html">Data Storage</a>
+    <a href="Web Design.html">Web Design</a>
+    <a href="Resources.html">Resources</a>
+  </div>
+  
+  </body>
+  </html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bird Calls of Oregon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<div id="textbox">
+ 
+  <p class="alignright"></p>
+</div>
+
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=.1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+  <div class="container">
+    <div class="boxed">
+      <div class="page-header">
+        <center>
+          <h1>Data Collection</h1></center>
+          <center><h3></h3></center>
+          <h3 style="text-align:center;"></h3>
+      </div>
+      <!-- <p>
+        <center><img src= "static/images/wave outline2.png" alt="wave" style="width:80%"></center></p> -->
+        <p>
+        </p>
+        <p>
+          Pulling the Data:</p>
+        <p>
+        <ul>
+          <li>Found a convenient API through Xeno-Canto - an online repository dedicated to sharing bird sounds from around the world.</li>  
+      </p>   
+      <p>
+          <li>Query parameters limited to the United States for Country and Oregon for State for the scope of this project. (Figure 1)</li>
+      </p>  
+      <p>
+          <li>We were able to successfully return a total of 763 recordings from 160 unique bird species. Each object in the recordings array were returned in the following format: (Figure 2)</li>
+      </p>
+      <p>
+              <li>A For loop was created to pull the following information for each recording and append it to lists that will be used to store data into a dataframe (Figure 3). An additional Column “Recording Name” was created in the dataframe which took the id of the recording and appended “.mp3” at the end. (Figure 4). This dataframe was exported as a CSV.</li>
+            </p>
+          </ul>
+        <p>
+          Cleaning the Data:</p> 
+            <ul>
+            <li>A group by and count function was used to identify bird species that only had 1 recording and dropped these species from the dataframe (Figure 5). This served as our training set for the machine learning model. (78 unique species and 300+ recordings).</li>
+              <p>
+                <li>A For loop was created  to download the actual recordings that will be fed into the machine learning mode to train and evaluate accuracy. (Figure 6)</li>
+              </ul>
+              <p>
+          Challenges:</p>  
+      </p>
+      <p>
+        <ul>
+          <li>All bird species did not have multiple recordings- identified and removed.</li>
+      </p>
+      <p>
+          <li>Linking metadata to recordings- included Recording Name in CSV</li>
+      </p> 
+      <p>
+            <li>Eventually found that .mp3 files were a bit more difficult to work with in the librosa library. Conversion of the .mp3s to .wav files needed, connected with Iris to complete.</li>
+            </ul>
+        </ul>
+      </p>
+      <p>
+        <!-- <li>Converting all files from mp3 to .wav as a preliminary step for creating mfcc’s in librosa</li>
+      </p> 
+      <p>
+        <li>Designing and defining a function to extract mfcc’s</li> -->
+      </p>   
+    </div>
+  </div>
+  
+  
+  
+  
+  <h2 style="text-align:center;"></h2>
+  
+  
+  </body>
+  </html>
+  
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <style>
+  
+  .img-container {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10;
+  }
+  
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <h2></h2>
+  <p></p>
+  
+  <div class="clearfix">
+    <div class="img-container">
+      <!-- <div class="image.resize"> -->
+      
+    <img src= "static/images/Jasmin 1.png" alt="Jasmin 1" style="width:100%">
+    </div>
+    <div class="img-container">
+    <img src="static/images/Jasmin 2.png" alt="Jasmin 2" style="width:100%">
+    </div>
+    <div class="img-container">
+    <img src="static/images/Jasmin 3.png" alt="Jasmin 3" style="width:100%">
+    </div>
+    <div class="img-container">
+    <img src="static/images/Jasmin 4.png" alt="Jasmin 4" style="width:100%">
+    </div>
+    <div class="img-container">
+    <img src="static/images/Jasmin 5.png" alt="Jasmin 5" style="width:100%">
+    </div>
+    <div class="img-container">
+      <img src="static/images/Jasmin 6.png" alt="Jasmin 6" style="width:100%">
+      </div>
+  </div>
+  </div>
+  
+  </body>
+  
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <style>
+  
+  
+  
+  /* <!-- <p>Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing property to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the effect.</p> -->
+  
+  </body>
+  </html> */
+  
+  
+  
